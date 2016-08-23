@@ -4,6 +4,7 @@
 ##### Setting up the server
 To run StatsD server, clone the StatsD repo from etsy. The following git link will work: 
 > https://github.com/etsy/statsd.git
+
 Then clone the ruban StatsD repo to get the integration files and clients. Place the following files from the 'Ruban StatsD Files' folder into there appropriate locations:
 - rubanConfig.js : StatsDServer_dir/
 - monitorMetrics.json : StatsDServer_dir/backends
