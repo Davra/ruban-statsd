@@ -1,11 +1,17 @@
 var os = require('os');
-// var config = require('/config');
+var config = require('./config.json');
+var definitions = require('./definitions.json');
 var http = require('http');
 var dgram = require('dgram');
 var _ = require('underscore');
 
 var HOST_IP = '127.0.0.1';
 var HOST_PORT = 8125;
+
+uploadDefinitions(config, definitions, function(err, boolean){
+	if(err) console.log(err);
+	console.log(boolean)
+});
 
 setInterval(getHostStats, 5000, reportToHost);
 
@@ -25,6 +31,12 @@ function getHostStats(callback){
   callback(data);
 }
 
+function uploadDefinitions(config, defs, callback){
+  var mess = JSON.stringify(defs);
+  var req = postRequest(config.rubanUrl, "/api/v1/iotdata/meta-data", mess);
+  req.end(mess);
+  callback(null, true);
+}
 
 function reportToHost(data) {
   var keys = Object.keys(data);
@@ -55,18 +67,18 @@ function reportToHost(data) {
   });
 }
 
-// function postRequest(host, url, body) {
-//   return new http.request({
-//     hostname: host,
-//     port: 58000,
-//     path: url,
-//     method: "POST",
-//     headers: {
-//         "Content-Type": "application/json",
-//         "Content-Length": Buffer.byteLength(body)
-//     }
-//   });
-// }
+ function postRequest(host, url, body) {
+   return new http.request({
+     hostname: host,
+     port: 58000,
+     path: url,
+     method: "POST",
+     headers: {
+         "Content-Type": "application/json",
+         "Content-Length": Buffer.byteLength(body)
+     }
+   });
+ }
 //
 // function putRequest(host, url, body) {
 //   return new http.request({

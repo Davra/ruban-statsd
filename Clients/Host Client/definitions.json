@@ -1,0 +1,16 @@
+[
+{
+  "name":"com.davranetworks.cpu.usage",
+  "label":"cpu usage",
+  "group":"davra networks",
+  "semantics":"metric",
+  "units":"percent"
+},
+{
+  "name":"com.davranetworks.mem.usage",
+  "label":"memory usage",
+  "group":"davra networks",
+  "semantics":"metric",
+  "units":"percent"
+}
+]

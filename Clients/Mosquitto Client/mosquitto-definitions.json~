@@ -1,0 +1,9 @@
+[
+{
+  "name":"org.mosquitto.bytes.recieved",
+  "label":"Mosquitto Bytes Recieved",
+  "group":"Davra Networks",
+  "semantics":"metric",
+  "units":"bytes"
+}
+]

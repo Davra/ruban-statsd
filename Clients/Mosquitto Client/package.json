@@ -1,0 +1,13 @@
+{
+  "name": "statsd",
+  "version": "0.8.0",
+  "description": "Network daemon for the collection and aggregation of realtime application metrics",
+  "author": {
+    "name": "Etsy",
+    "url": "https://codeascraft.com"
+  },
+  "dependencies": {
+    "mqtt": "^1.14.0",
+    "underscore": "^1.8.3"
+  }
+}

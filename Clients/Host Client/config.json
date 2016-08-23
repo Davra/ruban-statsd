@@ -1,0 +1,9 @@
+{
+
+	"StatsDHost" : "localhost",
+	"StatsDPort" : 8125,
+	"RubanHost" : "192.168.10.229",
+	"RubanPort" : 58000
+
+
+}
