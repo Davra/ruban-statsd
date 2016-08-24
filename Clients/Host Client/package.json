@@ -1,9 +1,10 @@
 {
-  "name": "Node StatsD Host Client",
+  "name": "node-statsd-host-client",
   "version": "0.0.1",
   "description": "This reports host stats to statsd",
   "author": "Mark Noone <mark.noone@davranetworks.com>",
   "dependencies": {
-    "os": "^0.1.1"
+    "os": "^0.1.1",
+    "underscore": "^1.8.3"
   }
 }
