@@ -16,8 +16,18 @@ Then execute the following command to start the server:
 > node stats.js rubanconfig.js 
 
 ##### Setting up a client
-To run a client, download your client folder and configure all information in the config files. Then launch the service with:
+To run a client, download your client folder and configure all information in the config files. 
+Install the client with npm, then launch the service with:
 > node <Service Name>.js
+
+All clients are responsible for sending metric definitions to ruban for the information they're sending. They have metric definitions already present in the definitions.json. If you wish to add more definitions to the metrics array, please edit with the following template: 	
+		{
+		  "name":"com.davranetworks.<dot seperated metric name>",
+		  "label":"<metric name>",
+		  "group":"davra networks",
+		  "semantics":"metric",
+		  "units":"<unit>"
+		}
 
 ### What is StatsD?
 StatsD is a software package used to aggregate metrics from multiple sources and report them to a place of your choosing with a custom written backend. 
