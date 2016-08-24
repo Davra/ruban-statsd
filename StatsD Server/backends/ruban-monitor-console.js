@@ -4,7 +4,6 @@ echo "metric_name:metric_value|type_specification" | nc -u -w0 127.0.0.1 8125 */
 
 var util = require('util');
 var http = require('http');
-var defs = require('./monitorMetrics.json');
 
 function RubanBackend(startupTime, config, emitter){
 
